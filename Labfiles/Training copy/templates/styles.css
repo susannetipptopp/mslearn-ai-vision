@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.left-section span {
+    font-size: 16px;
+}
+
+.right-section .status-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Replace with actual icons */
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #dcdcdc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-nav .nav-item {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+}
+
+.bottom-nav .nav-item.active {
+    color: #0000ff; /* Active color */
+}
+
+/* This is a very basic styling. You may need to add icons and adjust the layout for your actual application. */

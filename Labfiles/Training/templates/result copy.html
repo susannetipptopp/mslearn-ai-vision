@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Vision App Mockup</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .app-header {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  .app-body {
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .plant-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .plant-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .plant-info {
+    padding: 15px;
+  }
+  .plant-name {
+    font-size: 18px;
+    color: #333;
+  }
+  .plant-scientific {
+    font-size: 14px;
+    color: #666;
+  }
+  .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  .secondary-button {
+    background-color: #ddd;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .plant-info {
+      padding: 10px;
+    }
+    .plant-name {
+      font-size: 16px;
+    }
+    .plant-scientific {
+      font-size: 12px;
+    }
+    .button {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .app-body {
+      padding: 10px;
+    }
+    .plant-name {
+      font-size: 14px;
+    }
+    .plant-scientific {
+      font-size: 10px;
+    }
+    .button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="app-header">
+  <!-- App bar content like time, battery, icons can be added here -->
+</div>
+
+<div class="app-body">
+  <!-- Plant vision header or logo -->
+  
+  <div class="plant-card">
+    <!-- This is where the image of the plant goes -->
+    <img src=..\plantimages\1.jpg alt="Blue-Stem Yucca">
+    <div class="plant-info">
+      <div class="plant-name">Blue-Stem Yucca</div>
+      <div class="plant-scientific">Yucca gigantea</div>
+    </div>
+  </div>
+  
+  <a href="#" class="button">Add Plant</a>
+  <a href="#" class="button secondary-button">View other results</a>
+</div>
+
+</body>
+</html>

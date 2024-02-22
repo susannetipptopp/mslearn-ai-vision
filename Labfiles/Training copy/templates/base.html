@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Plant Vision App Mockup{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+   
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <!-- Navigation bar content -->
+       
+            <ul class="top-menu">
+              <li class="active"><a href="#plants">Plants</a></li>
+              <li><a href=index1.html>Facts</a></li>
+              <li><a href="#pictures">Pictures</a></li>
+              <li><a href="#search">Search</a></li>
+            </ul>
+               
+    </nav>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <!-- Footer content -->
+        <div class="footer">
+            <a href="#" class="button">Add Plant</a>
+            <a href="#" class="button secondary-button">View other results</a>
+          </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

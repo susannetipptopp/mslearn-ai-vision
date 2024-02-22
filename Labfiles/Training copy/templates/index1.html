@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Plants</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+  }
+  .header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .top-menu {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e4e4e4; /* Menu background */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  }
+
+  .top-menu li {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 20px; /* Rounded corners for menu items */
+  }
+  .top-menu li a {
+    text-decoration: none;
+    color: #333; /* Menu item text color */
+    font-weight: bold;
+  }
+  .top-menu li.active {
+    background-color: #4caf50; /* Active item background color */
+  }
+  .top-menu li.active a {
+    color: white; /* Active item text color */
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e8e8e8;
+    padding: 10px 0;
+  }
+  /* Base styles - mobile-first approach */
+.content {
+  display: grid;
+  grid-template-columns: 1fr; /* Full width columns by default */
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: inherit;
+}
+
+.menu, .button-group {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+  }
+  .menu {
+    background-color: #e4e4e4; /* Menu background */
+    border-radius: 50px; /* Rounded corners for the menu */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  }
+  .menu li a, .button-group button {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: none;
+    background-color: #4caf50; /* Button background */
+    color: white; /* Button text color */
+    font-weight: bold;
+    border-radius: 20px; /* Rounded corners for buttons */
+    cursor: pointer;
+  }
+  .menu li a:hover, .button-group button:hover {
+    background-color: #367c39; /* Darker shade on hover */
+  }
+  .menu li.active a {
+    background-color: #8bc34a; /* Lighter shade for active menu item */
+  }
+
+
+
+/* This media query is for tablets */
+@media (min-width: 600px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+  }
+}
+
+/* This media query is for desktops */
+@media (min-width: 900px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  }
+}
+
+/* This media query is for large desktops */
+@media (min-width: 1200px) {
+  .content {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large desktops */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">My Plants</div>
+
+<nav>
+    <ul class="top-menu">
+      <li><a href=start.html>Plants</a></li>
+      <li class="active"><a href="#plants">Plants</a></li>
+      <li><a href="#pictures">Pictures</a></li>
+      <li><a href="#search">Search</a></li>
+    </ul>
+  </nav>
+
+<div class="content">
+    
+
+    <div class="card">
+      <img src="../PlantImages/1.jpg" alt="Plant 1">
+      <p>4 tasks</p>
+    </div> 
+    <div class="card">
+    <img src="plant1.jpg" alt="Plant 1">
+    <p>4 tasks</p>
+  </div>
+  <div class="card">
+    <img src="plant2.jpg" alt="Plant 2">
+    <p>1 task</p>
+  </div>
+  <div class="card">
+    <img src="plant3.jpg" alt="Plant 3">
+    <p>0 tasks</p>
+  </div>
+  <div class="button-group">
+    <button onclick="takePicture()">Take Picture</button>
+    <input type="file" id="imageUpload" class="hidden" onchange="previewImage(event)" accept="image/*">
+    <button onclick="document.getElementById('imageUpload').click()">Upload Picture</button>
+  </div>
+</div>
+
+<div class="footer">
+  <button>Home</button>
+  <button>Add</button>
+  <button>Search</button>
+</div>
+
+<script>
+    function takePicture() {
+      // Implement or link to take picture functionality
+    }
+    
+    function uploadPicture() {
+      // Implement or link to upload picture functionality
+    }
+
+    function previewImage(event) {
+    // Get the file from the input
+    var file = event.target.files[0];
+    
+    // Make sure the file is an image
+    if (file.type.match('image.*')) {
+        // Create a new FileReader to read this file into a URL
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+        // Set the .image-preview src to the URL of the image
+        var imagePreview = document.getElementById('imagePreview');
+        imagePreview.src = e.target.result;
+        imagePreview.classList.remove('hidden');
+        }
+    
+    reader.readAsDataURL(file);
+  } else {
+    alert('Please select an image file.');
+  }
+}
+    </script>
+
+</body>
+</html>

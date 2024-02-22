@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis Result{% endblock %}
+
+{% block content %}
+    <h1 class="plant-name">Analysis Result</h1>
+    <p class="plant-scientific">The image was analyzed and the result is:</p>
+    
+
+    <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image" class="image-preview">
+
+    <div class="analysis-results">
+        <h2>Analysis Result</h2>
+        <p>The image was analyzed, and the results are:</p>
+        <ul>
+            {% for tag in result['customModelResult']['tagsResult']['values'] %}
+                <li>
+                    <strong>{{ tag['name'] }}</strong>
+                    <span>Confidence: {{ tag['confidence'] | round(4) }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% else %}
+        <p>No result to display.</p>
+    {% endif %}
+
+    
+{% endblock %}

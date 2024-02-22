@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Plants</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  .header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e8e8e8;
+    padding: 10px 0;
+  }
+  /* Base styles - mobile-first approach */
+.content {
+  display: grid;
+  grid-template-columns: 1fr; /* Full width columns by default */
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* This media query is for tablets */
+@media (min-width: 600px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+  }
+}
+
+/* This media query is for desktops */
+@media (min-width: 900px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  }
+}
+
+/* This media query is for large desktops */
+@media (min-width: 1200px) {
+  .content {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large desktops */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">My Plants</div>
+
+<div class="nav">
+  <button>Places</button>
+  <button>Plants</button>
+  <button>Pictures</button>
+  <button>Search</button>
+</div>
+
+<div class="content">
+  <div class="card">
+    <img src="plant1.jpg" alt="Plant 1">
+    <p>4 tasks</p>
+  </div>
+  <div class="card">
+    <img src="plant2.jpg" alt="Plant 2">
+    <p>1 task</p>
+  </div>
+  <div class="card">
+    <img src="plant3.jpg" alt="Plant 3">
+    <p>0 tasks</p>
+  </div>
+  <div class="card">
+    <button>Add a plant</button>
+  </div>
+</div>
+
+<div class="footer">
+  <button>Home</button>
+  <button>Add</button>
+  <button>Search</button>
+</div>
+
+</body>
+</html>

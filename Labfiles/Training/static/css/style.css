@@ -1,0 +1,257 @@
+/* Base styles - mobile-first approach */
+.analysis-results {
+  margin-top: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-results h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.analysis-results p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.analysis-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.analysis-results li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-results li strong {
+  display: block;
+  color: #333;
+}
+
+.analysis-results li span {
+  display: block;
+  color: #28a745;
+  margin-top: 5px;
+}
+
+.app-body {
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .app-header {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .body, html {
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .button {
+    background-color: #369f77;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  .button-group button:hover, .menu li a:hover {
+    background-color: #1c523d; /* Darker shade on hover */
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr; /* Full width columns by default */
+    padding: 10px;
+  }
+  
+  .header {
+    background-color: #f8f8f8;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .image-preview {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .menu, .button-group {
+    background-color: #fff1a1; /* Menu background */
+    border-radius: 50px; /* Rounded corners for the menu */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+  }
+  
+  .menu li a, .button-group button {
+    background-color: #4caf50; /* Button background */
+    border: none;
+    border-radius: 20px; /* Rounded corners for buttons */
+    color: white; /* Button text color */
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .menu li.active a, .top-menu li.active {
+    background-color: #4caf50; /* Active item background color */
+  }
+  
+  .menu li.active a {
+    background-color: #4caf50; /* Lighter shade for active menu item */
+  }
+  
+  .nav {
+    background-color: #fff1a1;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+  
+  .plant-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  .plant-card img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  
+  .plant-info {
+    padding: 15px;
+  }
+  
+  .plant-name {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .plant-scientific {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .secondary-button {
+    background-color: #ddd;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .top-menu {
+    background-color: #1c523d; /* Menu background */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+  }
+  
+  .top-menu li {
+    border-radius: 20px; /* Rounded corners for menu items */
+    margin: 0 4px;
+    padding: 8px 16px;
+  }
+  
+  .top-menu li a {
+    color: #333; /* Menu item text color */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .top-menu li.active a {
+    color: white; /* Active item text color */
+  }
+  
+  
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .plant-info {
+      padding: 10px;
+    }
+    .plant-name {
+      font-size: 16px;
+    }
+    .plant-scientific {
+      font-size: 12px;
+    }
+    .button {
+      padding: 10px;
+    }
+    .image-preview {
+        max-width: 100%;
+        height: auto;
+      }
+    .content {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+      }
+  }
+
+  @media (max-width: 480px) {
+    .app-body {
+      padding: 10px;
+    }
+    .plant-name {
+      font-size: 14px;
+    }
+    .plant-scientific {
+      font-size: 10px;
+    }
+    .button {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .image-preview {
+        max-width: 100%;
+        height: auto;
+      }
+    .content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+      }
+  }

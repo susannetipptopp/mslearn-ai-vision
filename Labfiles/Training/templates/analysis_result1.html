@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monstera Identification Results</title>
+</head>
+<body>
+
+   
+    <div id="results"></div>
+
+    <script>
+        // Assuming the JSON data is stored in a variable named `data`
+        // Use Jinja to convert the data to JSON format directly in the script
+        var data = JSON.parse('{{ data | tojson | safe }}');
+     
+
+        // Function to display the data
+        function displayData(data) {
+            const resultsContainer = document.getElementById('results');
+            const values = data.customModelResult.tagsResult.values;
+            let htmlContent = '<h2>Identification Results</h2>';
+            htmlContent += '<ul>';
+            for (let value of values) {
+                htmlContent += `<li>${value.name}: ${(value.confidence * 100).toFixed(2)}%</li>`;
+            }
+            htmlContent += '</ul>';
+            resultsContainer.innerHTML = htmlContent;
+        }
+
+        // Call the function to display the data
+        displayData(data);
+    </script>
+</body>
+</html>
